@@ -1,0 +1,72 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+library(dplyr)
+library(reshape2)
+library(tidyverse)
+```
+
+```{r}
+df = read.csv("apple_mobility.csv",check.names=FALSE)
+```
+
+```{r}
+df = df %>% filter(region == "Switzerland")
+df
+```
+
+
+```{r}
+df = df %>%
+  pivot_longer(- c(geo_type, region, `sub-region`, transportation_type, alternative_name, country), names_to = "date", values_to = "driving")
+df
+```
+
+```{r}
+write_csv(df, "test.csv")
+```
+
+
+
+
+```{r}
+df = read_csv("2020_CH_Region_Mobility_Report.csv")
+df
+```
+
+
+
+```{r}
+df = df %>% select(date, workplaces_percent_change_from_baseline) %>% group_by(date) %>% summarize(
+  workplaces_percent_change_from_baseline = mean(workplaces_percent_change_from_baseline)
+)
+```
+
+```{r}
+write_csv(df,'test1.csv')
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
