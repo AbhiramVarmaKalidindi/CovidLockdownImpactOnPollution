@@ -4,4 +4,4 @@
 
 The original project/research paper/codes are from the following github repo: [johanna-einsiedler/covid-19-air-pollution](https://github.com/johanna-einsiedler/covid-19-air-pollution)
 
-Mobibility datasets were downloaded from [Apple](https://covid19.apple.com/mobility) and [Google](https://www.google.com/covid19/mobility/)
+Mobility datasets were downloaded from [Apple](https://covid19.apple.com/mobility) and [Google](https://www.google.com/covid19/mobility/)
